@@ -9,6 +9,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class ChatService {
 
+	public List<PickupCall> getPickUpCall(){
+		List<PickupCall> data = new ArrayList<PickupCall>();
+		
+		data.add(new PickupCall("incomingcall", new Data(new  Date().getTime()+"", "incomingcall")));
+		return data;
+	}
+	
 	
 	public List<Message> getData(){
 		List<Message> data = new ArrayList<Message>();
@@ -25,4 +32,6 @@ public class ChatService {
 		data.add("new data - "+new Date());
 		return data;
 	}
+	
+	
 }

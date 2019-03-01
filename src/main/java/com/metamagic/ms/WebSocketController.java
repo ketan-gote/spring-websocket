@@ -14,11 +14,18 @@ public class WebSocketController {
 	@Autowired
 	private ChatService chatService;
 	
+//	@MessageMapping("/chat")
+//    @SendTo("/topic/messages")
+//    public List<Message> send(final Message message) throws Exception {
+//
+//        return chatService.getData();
+//    }
+	
 	@MessageMapping("/chat")
     @SendTo("/topic/messages")
-    public List<Message> send(final Message message) throws Exception {
+    public List<PickupCall> send(final Message message) throws Exception {
 
-        return chatService.getData();
+        return chatService.getPickUpCall();
     }
 	
 }

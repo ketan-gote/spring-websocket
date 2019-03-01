@@ -19,7 +19,7 @@ public class ChatScheduler {
     @Scheduled(fixedRate = 5000)
     public void publishUpdates(){
     	
-        template.convertAndSend("/topic/messages", service.getData());
+        template.convertAndSend("/topic/messages", service.getPickUpCall());
        
     }
 }
