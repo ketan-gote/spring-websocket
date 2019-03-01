@@ -16,7 +16,7 @@ public class WebSocketController {
 	
 	@MessageMapping("/chat")
     @SendTo("/topic/messages")
-    public List<String> send(final Message message) throws Exception {
+    public List<Message> send(final Message message) throws Exception {
 
         return chatService.getData();
     }

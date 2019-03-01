@@ -10,9 +10,18 @@ import org.springframework.stereotype.Component;
 public class ChatService {
 
 	
+	public List<Message> getData(){
+		List<Message> data = new ArrayList<Message>();
+		Message msg = new Message();
+		msg.setFrom("Ketan Gote");
+		msg.setText("New Message : "+new Date());
+		data.add(msg);
+		return data;
+	}
 	
-	public List<String> getData(){
+	public List<String> getData1(){
 		List<String> data = new ArrayList<String>();
+		Message msg = new Message();
 		data.add("new data - "+new Date());
 		return data;
 	}
