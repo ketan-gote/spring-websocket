@@ -23,7 +23,7 @@ public class WebSocketController {
 	
 	@MessageMapping("/chat")
     @SendTo("/topic/messages")
-    public List<PickupCall> send(final Message message) throws Exception {
+    public PickupCall send(final Message message) throws Exception {
 
         return chatService.getPickUpCall();
     }

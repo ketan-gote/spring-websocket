@@ -16,7 +16,7 @@ public class ChatScheduler {
     @Autowired
     ChatService service;
 
-    @Scheduled(fixedRate = 5000)
+    @Scheduled(fixedRate = 60000)
     public void publishUpdates(){
     	
         template.convertAndSend("/topic/messages", service.getPickUpCall());

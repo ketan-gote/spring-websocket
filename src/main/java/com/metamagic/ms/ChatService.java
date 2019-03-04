@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class ChatService {
 
-	public List<PickupCall> getPickUpCall(){
+	public PickupCall getPickUpCall(){
 		List<PickupCall> data = new ArrayList<PickupCall>();
 		
 		data.add(new PickupCall("incomingcall", new Data(new  Date().getTime()+"", "incomingcall")));
-		return data;
+		return new PickupCall("incomingcall", new Data(new  Date().getTime()+"", "incomingcall"));
 	}
 	
 	
