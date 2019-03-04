@@ -35,6 +35,7 @@ public class MessageScheduler {
 			BufferedReader br = new BufferedReader(fr);
 			String line = null;
 			while((line = br.readLine())!=null){
+				System.out.println("Sending data  "+line);
 				Call pc = new Call("incomingcall", new Data(line, "incomingcall"));
 				template.convertAndSend("/topic/messages", pc);
 			}

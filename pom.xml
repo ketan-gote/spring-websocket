@@ -6,7 +6,7 @@
 	<groupId>com.metamagic.ms</groupId>
 	<artifactId>websocket-example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>websocket-example</name>
 	<description>websocket example</description>
