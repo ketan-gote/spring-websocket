@@ -15,17 +15,10 @@ public class Config extends AbstractWebSocketMessageBrokerConfigurer {
         config.enableSimpleBroker("/topic");
         config.setApplicationDestinationPrefixes("/app");
     }
- 
-//    @Override
-//    public void registerStompEndpoints(StompEndpointRegistry registry) {
-//         registry.addEndpoint("/chat");
-//         registry.addEndpoint("/chat").withSockJS();
-//    }
-    
     
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-         registry.addEndpoint("/chat").setAllowedOrigins("*").withSockJS();
+         registry.addEndpoint("/connect").setAllowedOrigins("*").withSockJS();
          
     }    
     
